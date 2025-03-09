@@ -1,19 +1,20 @@
-Name: Gabriella (Gabi) Bekhrad
-Email: gbekhrad@chapman.edu
-ID: 2417841
+# Multithreaded Monte Carlo 
 
-Title of Assignment: Programming Assignment 3 - Threads
+Gabriella (Gabi) Bekhrad  
+gabimbek@gmail.com  
 
-Overview/Source Files:
+## Overview/Source Files:
 - mcarlo.c: C program that uses threads and a random number generator to run an algorithm that estimates pi.   
 
-To compile: 
+Estimating π can be done by supposing there exists a circle inscribed within a square. A series of random points are generated as simple (x, y) coordinates between (-1, 1) and (1, -1). π is estimated by performing the following calculation: π = 4 × (number of points in the circle) / (total number of points). This program simulates this in a multithreaded version of this algorithm that creates a separate thread to generate a number of random points. The thread counts the number of points that occur within the circle and stores that result in a global variable. When this thread has exited, the parent thread calculates and outputs the estimated value of π. The greater the number of points, the closer the approximation to π.
+
+### To compile: 
 gcc mcarlo.c -o mcarlo
 
-To run:
+### To run:
 ./mcarlo <number of points (integer)>
 
-Sample Output:
+## Sample Output:
 ./mcarlo hello        
 Invalid number of points.
 
@@ -41,7 +42,7 @@ Estimated Pi = 3.143018
 ./mcarlo 100000000 
 Estimated Pi = 3.141686
 
-Sources:
+## Sources:  
 https://www.geeksforgeeks.org/multithreading-in-c/
 https://www.design-reuse.com/articles/25090/dynamic-memory-allocation-fragmentation-c.html#:~:text=In%20C%2C%20dynamic%20memory%20is,pointer%20to%20the%20allocated%20memory.
 https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/ThreadArgs.html
